@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.incture.mobility.metrodata"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    compile project(':MAFSettingScreen-3.15.0')
+    compile project(':MAFUIComponents-3.15.0')
+    compile project(':MAFLogonUI-3.15.0')
+    compile project(':MobilePlace-3.15.0')
+    compile files('libs/AfariaSLL-7.00.6169.0.jar')
+    compile files('libs/odataoffline.jar')
+    compile files('libs/perflib-1.2.0.jar')
+    compile files('libs/sap-e2etrace-2.3.9.0.jar')
+    compile files('libs/ClientHubSLL-3.15.0.aar')
+    compile files('libs/ClientLog-3.15.0.aar')
+    compile files('libs/Common-3.15.0.aar')
+    compile files('libs/Connectivity-3.15.0.aar')
+    compile files('libs/CoreServices-3.15.0.aar')
+    compile files('libs/DataVaultLib-3.15.0.aar')
+    compile files('libs/E2ETrace-3.15.0.aar')
+    compile files('libs/HttpConvAuthFlows-3.15.0.aar')
+    compile files('libs/HttpConversation-3.15.0.aar')
+    compile files('libs/MAFLogger-3.15.0.aar')
+    compile files('libs/MAFLogonCore-3.15.0.aar')
+    compile files('libs/ODataAPI-3.15.0.aar')
+    compile files('libs/ODataOnline-3.15.0.aar')
+    compile files('libs/SupportabilityFacade-3.15.0.aar')
+    compile files('libs/XscriptParser-3.15.0.aar')
+    implementation 'com.google.code.gson:gson:2.2.4'
+}
